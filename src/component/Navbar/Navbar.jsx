@@ -1,6 +1,13 @@
 import React from 'react';
+import { useContext } from 'react';
+import { Link } from 'react-router-dom';
+import { FaBook } from 'react-icons/fa'
+import { AuthContext } from '../../Context/ContextProvider';
 
 const Navbar = () => {
+
+    const { user } = useContext(AuthContext)
+
     return (
         <div className="navbar bg-base-100">
             <div className="navbar-start">
@@ -9,40 +16,37 @@ const Navbar = () => {
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                     </label>
                     <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
-                        <li><a>Item 1</a></li>
-                        <li tabIndex={0}>
-                            <a className="justify-between">
-                                Parent
-                                <svg className="fill-current" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
-                            </a>
-                            <ul className="p-2">
-                                <li><a>Submenu 1</a></li>
-                                <li><a>Submenu 2</a></li>
-                            </ul>
-                        </li>
-                        <li><a>Item 3</a></li>
+                        <Link to='/home'>Home</Link>
+                        <Link to='/course' className='ml-2'>Course</Link>
+                        <Link to='/faq' className='px-3'>FAQ</Link>
+                        <Link to='/blog' className='px-3'>Blog</Link>
                     </ul>
                 </div>
-                <a className="btn btn-ghost normal-case text-xl">daisyUI</a>
+                <Link to='/home' className="btn btn-ghost normal-case text-xl"> <FaBook className='mr-3' /> Developed Skills</Link>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal p-0">
-                    <li><a>Item 1</a></li>
-                    <li tabIndex={0}>
-                        <a>
-                            Parent
-                            <svg className="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" /></svg>
-                        </a>
-                        <ul className="p-2">
-                            <li><a>Submenu 1</a></li>
-                            <li><a>Submenu 2</a></li>
-                        </ul>
-                    </li>
-                    <li><a>Item 3</a></li>
+                    <Link to='/home'>Home</Link>
+                    <Link to='/course' className='ml-2'>Course</Link>
+                    <Link to='/faq' className='px-3'>FAQ</Link>
+                    <Link to='/blog' className='px-3'>Blog</Link>
                 </ul>
             </div>
             <div className="navbar-end">
-                <a className="btn">Get started</a>
+                <div className="navbar-end naver-style">
+                    {user?.uid ?
+                        <>
+                            <span className=''>{user?.displayName}</span>
+                            <button className=' mx-2 lg:px-8 lg:py-2 sm:px-5 sm:py-2 lg:font-bold border lg:rounded-3xl sm:rounded-lg text-white bg-amber-400 hover:bg-white hover:border-amber-400 hover:text-amber-400 shadow-lg shadow-amber-500/50"'>Log Out</button>
+                        </>
+                        :
+                        <div><Link to='/login' className=" mx-2 px-8 py-2 font-bold border rounded-3xl text-white bg-amber-400 hover:bg-white hover:border-amber-400 hover:text-amber-400 shadow-lg shadow-amber-500/50">Login</Link>
+
+                            <Link to='/register' className=" mx-2 px-8 py-2 font-bold border rounded-3xl text-white bg-amber-400 hover:bg-white hover:border-amber-400 hover:text-amber-400 shadow-lg shadow-amber-500/50">Register</Link></div>
+
+                    }
+
+                </div>
             </div>
         </div>
     );
