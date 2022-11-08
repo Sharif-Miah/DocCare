@@ -18,6 +18,7 @@ const ContextProvider = ({ children }) => {
         return signInWithPopup(auth, provider)
     }
 
+    // Github Sign In
     const githubAuthProvider = provider => {
         setLoading(true)
         return signInWithPopup(auth, provider)

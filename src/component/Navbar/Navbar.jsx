@@ -1,17 +1,21 @@
 import React from 'react';
 import { useContext } from 'react';
 import { Link } from 'react-router-dom';
-import { FaBook } from 'react-icons/fa'
+import { FaBook, FaUser } from 'react-icons/fa'
 import { AuthContext } from '../../Context/ContextProvider';
 
 const Navbar = () => {
 
     const { user, logOut } = useContext(AuthContext);
 
-
+    const handleLogOut = () => {
+        logOut()
+            .then(() => { })
+            .catch(error => console.error(error))
+    }
 
     return (
-        <div className="navbar bg-base-100">
+        <div className="navbar  w-10/12 mx-auto mb-32">
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -39,17 +43,20 @@ const Navbar = () => {
                     {user?.uid ?
                         <>
                             <span className=''>{user?.displayName}</span>
-                            <button className=' mx-2 lg:px-8 lg:py-2 sm:px-5 sm:py-2 lg:font-bold border lg:rounded-3xl sm:rounded-lg text-white bg-amber-400 hover:bg-white hover:border-amber-400 hover:text-amber-400 shadow-lg shadow-amber-500/50"'>Log Out</button>
+                            <button onClick={handleLogOut} className=' mx-2 lg:px-8 lg:py-2 sm:px-5 sm:py-2 lg:font-bold border lg:rounded-3xl sm:rounded-lg text-white bg-amber-400 hover:bg-white hover:border-amber-400 hover:text-amber-400 shadow-lg shadow-amber-500/50"'>Log Out</button>
                         </>
                         :
                         <div><Link to='/login' className=" mx-2 px-8 py-2 font-bold border rounded-3xl text-white bg-amber-400 hover:bg-white hover:border-amber-400 hover:text-amber-400 shadow-lg shadow-amber-500/50">Login</Link>
 
                             <Link to='/register' className=" mx-2 px-8 py-2 font-bold border rounded-3xl text-white bg-amber-400 hover:bg-white hover:border-amber-400 hover:text-amber-400 shadow-lg shadow-amber-500/50">Register</Link></div>
-
                     }
-
                 </div>
             </div>
+            {
+                user?.photoURL ?
+                    <img title={user?.displayName} className='rounded-full w-10' src={user?.photoURL} alt="" />
+                    : <FaUser />
+            }
         </div>
     );
 };
