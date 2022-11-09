@@ -1,6 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import AllDetailsService from "../component/AllDetailsService/AllDetailsService";
 import DetailsService from "../component/DetailsService/DetailsService";
+import Error from "../component/Error/Error";
 import FAQ from "../component/FAQ/FAQ";
 import Hero from "../component/Hero/Hero";
 import Home from "../component/Home/Home";
@@ -15,6 +16,7 @@ const routes = createBrowserRouter([
     {
         path: '/',
         element: <Main />,
+        errorElement: <Error />,
         children: [
             {
                 path: '/',
@@ -31,12 +33,12 @@ const routes = createBrowserRouter([
             },
             {
                 path: '/DetailsService/:id',
-                element: <DetailsService />,
+                element: <PriveteRoute><DetailsService /></PriveteRoute>,
                 loader: ({ params }) => fetch(`https://server-site-reviw-website-farhan-sharif.vercel.app/services/${params.id}`)
             },
             {
                 path: '/AllDetailsService/:id',
-                element: <AllDetailsService />,
+                element: <PriveteRoute><AllDetailsService /></PriveteRoute>,
                 loader: ({ params }) => fetch(`https://server-site-reviw-website-farhan-sharif.vercel.app/allservices/${params.id}`)
             },
             {

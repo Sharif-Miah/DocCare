@@ -2,15 +2,13 @@ import React from 'react';
 import { useEffect } from 'react';
 import { useState } from 'react';
 import { useContext } from 'react';
-import { FaUser } from 'react-icons/fa';
 import { PhotoProvider, PhotoView } from 'react-photo-view';
 import { useLoaderData } from 'react-router-dom';
 import { toast } from 'react-toastify';
-import { AuthContext } from '../../Context/ContextProvider';
 import Review from '../Review/Review';
 
 const DetailsService = () => {
-    const { user } = useContext(AuthContext)
+
     const { _id, img, name, description, price } = useLoaderData();
 
     const [reviews, setReviews] = useState();
@@ -78,7 +76,6 @@ const DetailsService = () => {
                     reviews?.map(revi => <Review key={revi._id} revi={revi} />)
                 }
             </div>
-
 
 
             <div className='my-12'>
