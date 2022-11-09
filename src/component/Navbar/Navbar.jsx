@@ -3,6 +3,7 @@ import { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { FaMotorcycle, FaUser } from 'react-icons/fa'
 import { AuthContext } from '../../Context/ContextProvider';
+import logoImg from '../../assets/logoImg.png'
 
 const Navbar = () => {
 
@@ -27,7 +28,7 @@ const Navbar = () => {
                         <Link to='/blog' className='px-3'>Blog</Link>
                     </ul>
                 </div>
-                <Link to='/home' className="btn btn-ghost normal-case text-xl"> <FaMotorcycle className='mr-3' /> Delivery Services</Link>
+                <Link to='/home' className="btn btn-ghost normal-case text-xl"> <img src={logoImg} className='w-16' alt="" /> DocCare</Link>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal p-0">
