@@ -35,7 +35,8 @@ const DetailsService = () => {
             .then(res => res.json())
             .then(data => {
                 console.log(data);
-                notify()
+                notify();
+                form.reset()
             })
 
     }
