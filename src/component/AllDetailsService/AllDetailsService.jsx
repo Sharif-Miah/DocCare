@@ -1,9 +1,8 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
 
-const DetailsService = () => {
+const AllDetailsService = () => {
     const { img, name, description, price } = useLoaderData()
-
     return (
         <div className='w-10/12 mx-auto'>
             <div className="card lg:card-side bg-base-100 shadow-xl">
@@ -21,4 +20,4 @@ const DetailsService = () => {
     );
 };
 
-export default DetailsService;
+export default AllDetailsService;
