@@ -1,14 +1,19 @@
 import React from 'react';
+import { useEffect } from 'react';
+import { useState } from 'react';
 import { useContext } from 'react';
 import { FaUser } from 'react-icons/fa';
 import { PhotoProvider, PhotoView } from 'react-photo-view';
 import { useLoaderData } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import { AuthContext } from '../../Context/ContextProvider';
+import Review from '../Review/Review';
 
 const DetailsService = () => {
     const { user } = useContext(AuthContext)
     const { _id, img, name, description, price } = useLoaderData();
+
+    const [reviews, setReviews] = useState();
 
     const notify = () => toast.success('Successfully Added')
 
@@ -25,7 +30,7 @@ const DetailsService = () => {
         }
         console.log(reviews);
 
-        fetch('http://localhost:5000/review', {
+        fetch('https://server-site-reviw-website-farhan-sharif.vercel.app/review', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -35,11 +40,19 @@ const DetailsService = () => {
             .then(res => res.json())
             .then(data => {
                 console.log(data);
-                notify();
-                form.reset()
+                if (data.acknowledged) {
+                    notify();
+                    form.reset()
+                }
             })
 
     }
+
+    useEffect(() => {
+        fetch('https://server-site-reviw-website-farhan-sharif.vercel.app/review')
+            .then(res => res.json())
+            .then(data => setReviews(data))
+    }, [])
 
     return (
         <div className='w-10/12 mx-auto'>
@@ -58,6 +71,16 @@ const DetailsService = () => {
                     </div>
                 </div>
             </div>
+
+            {/* Review item  */}
+            <div>
+                {
+                    reviews?.map(revi => <Review key={revi._id} revi={revi} />)
+                }
+            </div>
+
+
+
             <div className='my-12'>
                 <form onSubmit={handleSubmit}>
                     <div>
