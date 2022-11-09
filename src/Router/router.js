@@ -1,4 +1,5 @@
 import { createBrowserRouter } from "react-router-dom";
+import DetailsService from "../component/DetailsService/DetailsService";
 import FAQ from "../component/FAQ/FAQ";
 import Hero from "../component/Hero/Hero";
 import Home from "../component/Home/Home";
@@ -24,8 +25,13 @@ const routes = createBrowserRouter([
             },
             {
                 path: '/services',
-                loader: () => fetch('http://localhost:5000/allservices'),
+                loader: () => fetch('https://server-site-reviw-website.vercel.app/allservices'),
                 element: <Services />
+            },
+            {
+                path: '/DetailsService/:id',
+                element: <DetailsService />,
+                loader: ({ params }) => fetch(`https://server-site-reviw-website-farhan-sharif.vercel.app/services/${params.id}`)
             },
             {
                 path: '/faq',
