@@ -4,7 +4,7 @@ import { toast } from 'react-toastify';
 
 
 const AddNewService = () => {
-    const notify = () => toast.success('Successfully Added')
+    const notify = () => toast.success('Successfully Service Added')
     const handleSubmit = (event) => {
         event.preventDefault();
         const form = event.target;
@@ -22,7 +22,7 @@ const AddNewService = () => {
         console.log(addService);
 
 
-        fetch('https://server-site-reviw-website-farhan-sharif.vercel.app/', {
+        fetch('https://server-site-reviw-website-farhan-sharif.vercel.app/services', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -33,10 +33,8 @@ const AddNewService = () => {
             .then(data => {
                 form.reset()
                 console.log(data);
-
+                notify()
             })
-
-
 
     }
 

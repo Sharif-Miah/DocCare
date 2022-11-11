@@ -9,7 +9,7 @@ const ThreeService = () => {
     const [services, setServices] = useState()
 
     useEffect(() => {
-        fetch('https://server-site-reviw-website.vercel.app/services')
+        fetch('https://server-site-reviw-website-farhan-sharif.vercel.app/services')
             .then(res => res.json())
             .then(data => {
                 setServices(data)
