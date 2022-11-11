@@ -1,12 +1,10 @@
 import React from 'react';
 import { toast } from 'react-toastify';
 
-const toisty = () => {
-    toast.success('successfully added')
-}
+
 
 const AddNewService = () => {
-
+    const notify = () => toast.success('Successfully Added')
     const handleSubmit = (event) => {
         event.preventDefault();
         const form = event.target;
@@ -21,6 +19,23 @@ const AddNewService = () => {
             price,
             description,
         }
+        console.log(addService);
+
+
+        // fetch('https://server-site-reviw-website-farhan-sharif.vercel.app/', {
+        //     method: 'POST',
+        //     headers: {
+        //         'content-type': 'application/json'
+        //     },
+        //     body: JSON.stringify(addService)
+        // })
+        //     .then(res => res.json())
+        //     .then(data => {
+        //         form.reset()
+        //         console.log(data);
+
+        //     })
+
 
         fetch('https://server-site-reviw-website-farhan-sharif.vercel.app/services', {
             method: 'POST',
@@ -33,11 +48,11 @@ const AddNewService = () => {
             .then(data => {
                 console.log(data);
                 if (data.acknowledged) {
-
+                    notify();
                     form.reset()
                 }
-
             })
+
     }
 
     return (

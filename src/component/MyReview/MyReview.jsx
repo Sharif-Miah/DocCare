@@ -67,8 +67,6 @@ const MyReview = () => {
                             {
                                 data.map((review, i) => <SignleReviewTr review={review} key={review._id} i={i} handleDelete={handleDelete} handleApprovingStatus={handleApprovingStatus} />)
                             }
-
-
                         </tbody>
                     </table>
                 </div>

@@ -2,6 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 import AddNewService from "../component/AddNewService/AddNewService";
 import Blog from "../component/Blog/Blog";
 import DetailsService from "../component/DetailsService/DetailsService";
+import EditInput from "../component/EditInput/EditInput";
 import FAQ from "../component/FAQ/FAQ";
 import Home from "../component/Home/Home";
 import Login from "../component/Login/Login";
@@ -26,7 +27,7 @@ const routes = createBrowserRouter([
             },
             {
                 path: '/services',
-                loader: () => fetch('https://server-site-reviw-website.vercel.app/allservices'),
+                // loader: () => fetch('https://server-site-reviw-website.vercel.app/allservices'),
                 element: <Services />
             },
             {
@@ -47,6 +48,10 @@ const routes = createBrowserRouter([
                 path: '/myreview',
                 element: <PriveteRoute><MyReview /></PriveteRoute>,
                 loader: () => fetch(`https://server-site-reviw-website-farhan-sharif.vercel.app/review`)
+            },
+            {
+                path: '/editinput',
+                element: <EditInput />
             },
             {
                 path: '/blog',

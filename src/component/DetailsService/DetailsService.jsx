@@ -18,7 +18,6 @@ const DetailsService = () => {
         event.preventDefault();
         const form = event.target;
         const message = form.message.value;
-        console.log(message)
 
         if (message === '') {
             return alert('please enter a description')
