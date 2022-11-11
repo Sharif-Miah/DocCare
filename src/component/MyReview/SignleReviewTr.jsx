@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { AiFillDelete, AiFillEdit } from 'react-icons/ai';
-import { Link } from 'react-router-dom';
 
 const SignleReviewTr = ({ review, i, handleDelete, handleApprovingStatus }) => {
     const [isEditing, setEditing] = useState(false)
@@ -15,17 +14,21 @@ const SignleReviewTr = ({ review, i, handleDelete, handleApprovingStatus }) => {
     }
 
     return (
-        <tr>
-            <th>{i + 1}</th>
-            <td>{service}</td>
-            <td className='flex flex-wrap '>{!isEditing ? <span>{input}</span> : <input className='border border-black' type="text" defaultValue={input} value={input} onChange={(e) => setInput(e.target.value)} />}</td>
-            <td >{
-                !isEditing ? <button onClick={() => setEditing(true)}><AiFillEdit /></button>
-                    : <button onClick={updating}>update</button>
+        <div>
 
-            }  </td>
-            <td> <span onClick={() => handleDelete(_id)}><AiFillDelete /></span> </td>
-        </tr>
+            <tr>
+                <th>{i + 1}</th>
+                <td>{service}</td>
+                <td className='flex flex-wrap '>{!isEditing ? <span>{input}</span> : <input className='border border-black' type="text" defaultValue={input} value={input} onChange={(e) => setInput(e.target.value)} />}</td>
+                <td >{
+                    !isEditing ? <button onClick={() => setEditing(true)}><AiFillEdit /></button>
+                        : <button onClick={updating}>update</button>
+
+                }  </td>
+                <td> <span onClick={() => handleDelete(_id)}><AiFillDelete /></span> </td>
+            </tr>
+
+        </div>
     )
 }
 

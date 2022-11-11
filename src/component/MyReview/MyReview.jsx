@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
+import { toast } from 'react-toastify';
 import SignleReviewTr from './SignleReviewTr';
 
 
 const MyReview = () => {
     const data = useLoaderData()
-    const [dataDelt, setDataDelt] = useState(false)
+    const [dataDelt, setDataDelt] = useState(true)
     const [orders, setOrder] = useState([]);
-
+    const toastify = () => toast.success('successfully Delete')
 
     const handleDelete = id => {
         const proceed = window.confirm('Are you sure, you want to cancel this order')
@@ -20,8 +21,8 @@ const MyReview = () => {
                     console.log(data);
                     if (data.deletedCount
                         > 0) {
-                        alert('deleted successfully')
-                        setDataDelt(true)
+                        toastify()
+                        setDataDelt(false)
                         console.log(dataDelt)
                         const remainging = orders.filter(odr => odr._id !== id);
                         setOrder(remainging)
@@ -49,27 +50,28 @@ const MyReview = () => {
 
     return (
         <div className='w-10/12 mx-auto'>
-            <h1>My Review</h1>
+            <h1 className='text-4xl text-center mb-12'>My Review </h1>
             <div>
-                <div className="overflow-x-auto">
-                    <table className="table table-zebra w-full">
-
-                        <thead>
-                            <tr>
-                                <th>sl</th>
-                                <th>Service Name</th>
-                                <th className='w-4/6'>Review</th>
-                                <th>edit</th>
-                                <th>delete</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {
-                                data.map((review, i) => <SignleReviewTr review={review} key={review._id} i={i} handleDelete={handleDelete} handleApprovingStatus={handleApprovingStatus} />)
-                            }
-                        </tbody>
-                    </table>
-                </div>
+                {
+                    data.length === 0 ? <h1 className='text-3xl text-center text-red-600'>No Review added</h1> : <div className="overflow-x-auto">
+                        <table className="table table-zebra w-full">
+                            <thead>
+                                <tr>
+                                    <th>sl</th>
+                                    <th>Service Name</th>
+                                    <th className='w-4/6'>Review</th>
+                                    <th>edit</th>
+                                    <th>delete</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {
+                                    data.map((review, i) => <SignleReviewTr review={review} key={review._id} i={i} handleDelete={handleDelete} handleApprovingStatus={handleApprovingStatus} />)
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                }
             </div>
         </div>
     )
