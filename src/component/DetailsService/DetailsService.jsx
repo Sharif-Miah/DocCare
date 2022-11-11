@@ -5,6 +5,7 @@ import { toast } from 'react-toastify';
 import { AuthContext } from '../../Context/ContextProvider';
 import Review from '../Review/Review';
 
+
 const DetailsService = () => {
     const navigate = useNavigate();
     const { user } = useContext(AuthContext)
@@ -26,6 +27,7 @@ const DetailsService = () => {
             service: _id,
             customer: user?.displayName,
             uid: user?.uid,
+            createdAt: new Date().getTime(),
             message
         }
 
@@ -74,7 +76,9 @@ const DetailsService = () => {
             {/* Review item  */}
             <div>
                 {
-                    reviews?.filter(review => review.service === _id)?.map(revi => <Review key={revi._id} revi={revi} />)
+                    reviews?.filter(review => review.service === _id)
+                        ?.sort((a, b) => b.createdAt - a.createdAt)
+                        ?.map(revi => <Review key={revi._id} revi={revi} />)
                 }
             </div>
             <div className='my-12'>
