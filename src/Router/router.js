@@ -1,10 +1,12 @@
 import { createBrowserRouter } from "react-router-dom";
 import AddNewService from "../component/AddNewService/AddNewService";
+import Blog from "../component/Blog/Blog";
 import DetailsService from "../component/DetailsService/DetailsService";
 import FAQ from "../component/FAQ/FAQ";
 import Home from "../component/Home/Home";
 import Login from "../component/Login/Login";
 import MyReview from "../component/MyReview/MyReview";
+import PriveteRoute from "../component/PriveteRoute/PriveteRoute";
 import Register from "../component/Register/Register";
 import Services from "../component/Services/Services";
 import Main from "../layout/Main";
@@ -39,16 +41,16 @@ const routes = createBrowserRouter([
             },
             {
                 path: '/addnewservice',
-                element: <AddNewService />
+                element: <PriveteRoute><AddNewService /></PriveteRoute>
             },
             {
                 path: '/myreview',
-                element: <MyReview />,
+                element: <PriveteRoute><MyReview /></PriveteRoute>,
                 loader: () => fetch(`https://server-site-reviw-website-farhan-sharif.vercel.app/review`)
             },
             {
-                path: '/faq',
-                element: <FAQ />
+                path: '/blog',
+                element: <Blog />
             },
             {
                 path: '/login',

@@ -2,51 +2,114 @@ import React from 'react';
 
 const Profile = () => {
     return (
-        <section className="dark:bg-gray-800 dark:text-gray-100">
-            <h1 className='text-5xl text-center my-8 font-bold underline'>When I was start job </h1>
-            <div className="container max-w-5xl px-4 py-12 mx-auto">
-                <div className="grid gap-4 mx-4 sm:grid-cols-12">
-                    <div className="col-span-12 sm:col-span-3">
-                        <div className="text-center sm:text-left mb-14 before:block before:w-24 before:h-3 before:mb-5 before:rounded-md before:mx-auto sm:before:mx-0 before:dark:bg-violet-400">
-                            <h3 className="text-3xl font-semibold">My work start </h3>
-                            <span className="text-sm font-bold tracking-wider uppercase dark:text-gray-400">Farhan Sharif</span>
+        <section className="bg-gray-800 text-gray-100">
+            <div className="container max-w-xl p-6 py-12 mx-auto space-y-24 lg:px-8 lg:max-w-7xl">
+                <div>
+                    <h2 className="text-3xl font-bold tracking-tight text-center sm:text-5xl dark:text-gray-50">Advice</h2>
+                    <p className="max-w-3xl mx-auto mt-4 text-xl text-center dark:text-gray-400">I will give advise in this topic</p>
+                </div>
+                <div className="grid lg:gap-8 lg:grid-cols-2 lg:items-center">
+                    <div>
+                        <h3 className="text-2xl font-bold tracking-tight sm:text-3xl dark:text-gray-50">Advice Topic here below</h3>
+                        <p className="mt-3 text-lg dark:text-gray-400">Advice essays are common assignments in school as well as for college applications. This lesson offers some topics that will help students get going with their advice essays.</p>
+                        <div className="mt-12 space-y-12">
+                            <div className="flex">
+                                <div className="flex-shrink-0">
+                                    <div className="flex items-center justify-center w-12 h-12 rounded-md dark:bg-violet-400 dark:text-gray-900">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-7 h-7">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div className="ml-4">
+                                    <h4 className="text-lg font-medium leading-6 dark:text-gray-50">Acne</h4>
+                                    <p className="mt-2 dark:text-gray-400">Acne is a skin condition that occurs when your hair follicles become plugged with oil and dead skin.</p>
+                                </div>
+                            </div>
+                            <div className="flex">
+                                <div className="flex-shrink-0">
+                                    <div className="flex items-center justify-center w-12 h-12 rounded-md dark:bg-violet-400 dark:text-gray-900">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-7 h-7">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div className="ml-4">
+                                    <h4 className="text-lg font-medium leading-6 dark:text-gray-50">Eczema</h4>
+                                    <p className="mt-2 dark:text-gray-400">Eczema is the name for a group of skin conditions that cause dry, irritated skin. Other types of ecz.</p>
+                                </div>
+                            </div>
+                            <div className="flex">
+                                <div className="flex-shrink-0">
+                                    <div className="flex items-center justify-center w-12 h-12 rounded-md dark:bg-violet-400 dark:text-gray-900">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-7 h-7">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div className="ml-4">
+                                    <h4 className="text-lg font-medium leading-6 dark:text-gray-50">Hair loss</h4>
+                                    <p className="mt-2 dark:text-gray-400">Hearing loss that occurs gradually as you age (presbycusis) is common. Almost half the people in the</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div className="relative col-span-12 px-4 space-y-6 sm:col-span-9">
-                        <div className="col-span-12 space-y-12 relative px-4 sm:col-span-8 sm:space-y-8 sm:before:absolute sm:before:top-2 sm:before:bottom-0 sm:before:w-0.5 sm:before:-left-3 before:dark:bg-gray-700">
-                            <div className="flex flex-col sm:relative sm:before:absolute sm:before:top-2 sm:before:w-4 sm:before:h-4 sm:before:rounded-full sm:before:left-[-35px] sm:before:z-[1] before:dark:bg-violet-400">
-                                <h3 className="text-xl font-semibold tracking-wide">Fish Delivery </h3>
-                                <time className="text-xs tracking-wide uppercase dark:text-gray-400">Dec 2021</time>
-                                <p className="mt-3">A fish is an amazing animal which lives and breathes in water.</p>
+                    <div aria-hidden="true" className="mt-10 lg:mt-0">
+                        <img src="https://media.istockphoto.com/id/1372002650/photo/cropped-portrait-of-an-attractive-young-female-doctor-standing-with-her-arms-folded-in-the.jpg?b=1&s=170667a&w=0&k=20&c=ZaIV4-qe9Bgx9QTal0mAU6MbR8eOzxA4jf0KVKYjVMQ=" alt="" className="mx-auto rounded-lg shadow-lg dark:bg-gray-500" />
+                    </div>
+                </div>
+                <div>
+                    <div className="grid lg:gap-8 lg:grid-cols-2 lg:items-center">
+                        <div className="lg:col-start-2">
+                            <h3 className="text-2xl font-bold tracking-tight sm:text-3xl dark:text-gray-50">Skin cancer</h3>
+                            <p className="mt-3 text-lg dark:text-gray-400">Skin cancer the abnormal growth of skin cells most often develops on skin exposed to the sun. </p>
+                            <div className="mt-12 space-y-12">
+                                <div className="flex">
+                                    <div className="flex-shrink-0">
+                                        <div className="flex items-center justify-center w-12 h-12 rounded-md dark:bg-violet-400 dark:text-gray-900">
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-7 h-7">
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div className="ml-4">
+                                        <h4 className="text-lg font-medium leading-6 dark:text-gray-50">Psoriasis</h4>
+                                        <p className="mt-2 dark:text-gray-400">
+                                            Psoriasis is a skin condition that causes flaky patches of skin which form scales. On brown, black</p>
+                                    </div>
+                                </div>
+                                <div className="flex">
+                                    <div className="flex-shrink-0">
+                                        <div className="flex items-center justify-center w-12 h-12 rounded-md dark:bg-violet-400 dark:text-gray-900">
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-7 h-7">
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div className="ml-4">
+                                        <h4 className="text-lg font-medium leading-6 dark:text-gray-50">Nail fungus</h4>
+                                        <p className="mt-2 dark:text-gray-400">
+                                            Nail fungus is a common infection of the nail. It begins as a white or yellow-brown spot under the </p>
+                                    </div>
+                                </div>
+                                <div className="flex">
+                                    <div className="flex-shrink-0">
+                                        <div className="flex items-center justify-center w-12 h-12 rounded-md dark:bg-violet-400 dark:text-gray-900">
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-7 h-7">
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div className="ml-4">
+                                        <h4 className="text-lg font-medium leading-6 dark:text-gray-50">Psoriasis</h4>
+                                        <p className="mt-2 dark:text-gray-400">
+                                            Psoriasis is a skin condition that causes flaky patches of skin which form scales. On brown, black </p>
+                                    </div>
+                                </div>
                             </div>
-                            <div className="flex flex-col sm:relative sm:before:absolute sm:before:top-2 sm:before:w-4 sm:before:h-4 sm:before:rounded-full sm:before:left-[-35px] sm:before:z-[1] before:dark:bg-violet-400">
-                                <h3 className="text-xl font-semibold tracking-wide">Cloth Delivery</h3>
-                                <time className="text-xs tracking-wide uppercase dark:text-gray-400">Jul 2022</time>
-                                <p className="mt-3">Clothing is worn where the human body needs protection.</p>
-                            </div>
-                            <div className="flex flex-col sm:relative sm:before:absolute sm:before:top-2 sm:before:w-4 sm:before:h-4 sm:before:rounded-full sm:before:left-[-35px] sm:before:z-[1] before:dark:bg-violet-400">
-                                <h3 className="text-xl font-semibold tracking-wide">Book Delivery</h3>
-                                <time className="text-xs tracking-wide uppercase dark:text-gray-400">Jan 2017</time>
-                                <p className="mt-3">A book can change your life by its content.There are lots of life-changing books that we all need to read.</p>
-                            </div>
-
-                            <div className="flex flex-col sm:relative sm:before:absolute sm:before:top-2 sm:before:w-4 sm:before:h-4 sm:before:rounded-full sm:before:left-[-35px] sm:before:z-[1] before:dark:bg-violet-400">
-                                <h3 className="text-xl font-semibold tracking-wide">Burger Delivery</h3>
-                                <time className="text-xs tracking-wide uppercase dark:text-gray-400">Nov 2018</time>
-                                <p className="mt-3">A book can change your life by its content.There are lots of life-changing books that we all need to read.</p>
-                            </div>
-
-                            <div className="flex flex-col sm:relative sm:before:absolute sm:before:top-2 sm:before:w-4 sm:before:h-4 sm:before:rounded-full sm:before:left-[-35px] sm:before:z-[1] before:dark:bg-violet-400">
-                                <h3 className="text-xl font-semibold tracking-wide">Fruits Delivery</h3>
-                                <time className="text-xs tracking-wide uppercase dark:text-gray-400">Mar 2020</time>
-                                <p className="mt-3">They are low in calories their and naturally sweet. Fruits and</p>
-                            </div>
-
-                            <div className="flex flex-col sm:relative sm:before:absolute sm:before:top-2 sm:before:w-4 sm:before:h-4 sm:before:rounded-full sm:before:left-[-35px] sm:before:z-[1] before:dark:bg-violet-400">
-                                <h3 className="text-xl font-semibold tracking-wide">Vegetable Delivery</h3>
-                                <time className="text-xs tracking-wide uppercase dark:text-gray-400">Jun 2022</time>
-                                <p className="mt-3">vegetables contain important vitamins. minerals and plant chemicals. They also contain fibre.</p>
-                            </div>
+                        </div>
+                        <div className="mt-10 lg:mt-0 lg:col-start-1 lg:row-start-1">
+                            <img src="https://media.istockphoto.com/id/1346711310/photo/portrait-of-smiling-female-doctor-wearing-uniform-standing.jpg?b=1&s=170667a&w=0&k=20&c=MP4Uz3zLO_2i8WGmcYaQgz8mOh2IrRjf5byFhqKRroY=" alt="" className="mx-auto rounded-lg shadow-lg dark:bg-gray-500" />
                         </div>
                     </div>
                 </div>
