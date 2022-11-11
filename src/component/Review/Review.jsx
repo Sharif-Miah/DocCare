@@ -1,6 +1,4 @@
-import React from 'react';
-import { useContext } from 'react';
-import { useLoaderData } from 'react-router-dom';
+import React, { useContext } from 'react';
 import { AuthContext } from '../../Context/ContextProvider';
 
 const Review = ({ revi }) => {

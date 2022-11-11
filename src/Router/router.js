@@ -1,22 +1,18 @@
 import { createBrowserRouter } from "react-router-dom";
-import AllDetailsService from "../component/AllDetailsService/AllDetailsService";
+import AddNewService from "../component/AddNewService/AddNewService";
 import DetailsService from "../component/DetailsService/DetailsService";
-import Error from "../component/Error/Error";
 import FAQ from "../component/FAQ/FAQ";
-import Hero from "../component/Hero/Hero";
 import Home from "../component/Home/Home";
 import Login from "../component/Login/Login";
-import PriveteRoute from "../component/PriveteRoute/PriveteRoute";
+import MyReview from "../component/MyReview/MyReview";
 import Register from "../component/Register/Register";
 import Services from "../component/Services/Services";
-import ThreeService from "../component/ThreeService/ThreeService";
 import Main from "../layout/Main";
 
 const routes = createBrowserRouter([
     {
         path: '/',
         element: <Main />,
-        errorElement: <Error />,
         children: [
             {
                 path: '/',
@@ -33,13 +29,22 @@ const routes = createBrowserRouter([
             },
             {
                 path: '/DetailsService/:id',
-                element: <PriveteRoute><DetailsService /></PriveteRoute>,
+                element: <DetailsService />,
                 loader: ({ params }) => fetch(`https://server-site-reviw-website-farhan-sharif.vercel.app/services/${params.id}`)
             },
             {
                 path: '/AllDetailsService/:id',
-                element: <PriveteRoute><AllDetailsService /></PriveteRoute>,
+                element: <DetailsService />,
                 loader: ({ params }) => fetch(`https://server-site-reviw-website-farhan-sharif.vercel.app/allservices/${params.id}`)
+            },
+            {
+                path: '/addnewservice',
+                element: <AddNewService />
+            },
+            {
+                path: '/myreview',
+                element: <MyReview />,
+                loader: () => fetch(`https://server-site-reviw-website-farhan-sharif.vercel.app/review`)
             },
             {
                 path: '/faq',

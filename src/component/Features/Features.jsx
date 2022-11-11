@@ -12,68 +12,54 @@ const Features = () => {
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-8 h-8 dark:text-violet-400">
                         <path fillRule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clipRule="evenodd"></path>
                     </svg>
-                    <h3 className="my-3 text-3xl font-semibold">Fish Delivery</h3>
+                    <h3 className="my-3 text-3xl font-semibold">Acne Service</h3>
                     <div className="space-y-1 leading-tight">
-                        <p>A fish is an amazing animal which lives and breathes in water.</p>
-                        <p>Fish have been on the Earth for over 500 million years.</p>
-                        <p>All fish have a backbone and most breathe through gills</p>
+                        Acne is a skin condition that occurs when your hair follicles become plugged with oil and dead skin cells.
                     </div>
                 </div>
                 <div className="flex flex-col items-center p-4">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-8 h-8 dark:text-violet-400">
                         <path fillRule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clipRule="evenodd"></path>
                     </svg>
-                    <h3 className="my-3 text-3xl font-semibold">Book Delivery</h3>
+                    <h3 className="my-3 text-3xl font-semibold">Eczema Service</h3>
                     <div className="space-y-1 leading-tight">
-                        <p>A book can change your life by its content.  </p>
-                        <p>There are lots of life-changing books that</p>
-                        <p>we all need to read.</p>
+                        <p>Eczema is the name for a group of skin conditions that cause dry, irritated skin.</p>
                     </div>
                 </div>
                 <div className="flex flex-col items-center p-4">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-8 h-8 dark:text-violet-400">
                         <path fillRule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clipRule="evenodd"></path>
                     </svg>
-                    <h3 className="my-3 text-3xl font-semibold">Cloth Delivery</h3>
+                    <h3 className="my-3 text-3xl font-semibold">Hair loss Service</h3>
                     <div className="space-y-1 leading-tight">
-                        <p>Clothing is worn where the human body needs protection.  </p>
-                        <p>from the sun and dust in hot, dry countries lacking shade</p>
-                        <p>and from the cold and wet in temperate climates.</p>
+                        <p>Hearing loss that occurs gradually as you age (presbycusis) is common. Almost half the people in the United States older than age 65 .</p>
                     </div>
                 </div>
                 <div className="flex flex-col items-center p-4">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-8 h-8 dark:text-violet-400">
                         <path fillRule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clipRule="evenodd"></path>
                     </svg>
-                    <h3 className="my-3 text-3xl font-semibold">Burger Delivery</h3>
+                    <h3 className="my-3 text-3xl font-semibold">Skin cancer Service</h3>
                     <div className="space-y-1 leading-tight">
-                        <p>
-                            Write a topic sentence as the "top bun" of your hamburger. ..
-                        </p>
-                        <p>you what the paragraph is about. For example, if you were writing</p>
-                        <p>The topic sentence should tell.The cheese is going to be another .</p>
+                        <p>Skin cancer  the abnormal growth of skin cells  most often develops on skin exposed to the sun.</p>
                     </div>
                 </div>
                 <div className="flex flex-col items-center p-4">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-8 h-8 dark:text-violet-400">
                         <path fillRule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clipRule="evenodd"></path>
                     </svg>
-                    <h3 className="my-3 text-3xl font-semibold">Fruits Delivery</h3>
+                    <h3 className="my-3 text-3xl font-semibold">Psoriasis Service</h3>
                     <div className="space-y-1 leading-tight">
-                        <p>They are low in calories  their j</p>
-                        <p>and naturally sweet. Fruits and</p>
-                        <p>uices are good sources of water, too.</p>
+                        <p>Psoriasis is a skin condition that causes flaky patches of skin which form scales</p>
                     </div>
                 </div>
                 <div className="flex flex-col items-center p-4">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-8 h-8 dark:text-violet-400">
                         <path fillRule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clipRule="evenodd"></path>
                     </svg>
-                    <h3 className="my-3 text-3xl font-semibold">Vegetable Delivery</h3>
+                    <h3 className="my-3 text-3xl font-semibold">Nail fungus</h3>
                     <div className="space-y-1 leading-tight">
-                        <p>vegetables contain important vitamins. </p>
-                        <p>minerals and plant chemicals.</p>
-                        <p> They also contain fibre.</p>
+                        <p>Nail fungus is a common infection of the nail. It begins as a white or yellow-brown spot under the tip of your fingernail or toenail.</p>
                     </div>
                 </div>
             </div>
