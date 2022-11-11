@@ -16,7 +16,6 @@ const Review = ({ revi }) => {
                     </div>
                     <div>
                         <h4 className="font-bold">{customer}</h4>
-
                     </div>
                 </div>
 

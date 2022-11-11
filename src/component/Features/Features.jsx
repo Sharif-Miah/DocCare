@@ -59,7 +59,7 @@ const Features = () => {
                     </svg>
                     <h3 className="my-3 text-3xl font-semibold">Nail fungus</h3>
                     <div className="space-y-1 leading-tight">
-                        <p>Nail fungus is a common infection of the nail. It begins as a white or yellow-brown spot under the tip of your fingernail or toenail.</p>
+                        <p>Nail fungus is a common infection of the nail. It begins as a white or yellow-brown spot under the</p>
                     </div>
                 </div>
             </div>

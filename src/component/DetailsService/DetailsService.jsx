@@ -17,6 +17,7 @@ const DetailsService = () => {
         event.preventDefault();
         const form = event.target;
         const message = form.message.value;
+        console.log(message)
 
         if (message === '') {
             return alert('please enter a description')
@@ -28,7 +29,7 @@ const DetailsService = () => {
             message
         }
 
-        fetch('http://localhost:5000/review', {
+        fetch('https://server-site-reviw-website-farhan-sharif.vercel.app/addreview', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -47,7 +48,7 @@ const DetailsService = () => {
     }
 
     useEffect(() => {
-        fetch('http://localhost:5000/review')
+        fetch('https://server-site-reviw-website-farhan-sharif.vercel.app/review')
             .then(res => res.json())
             .then(data => setReviews(data))
     }, [reviews])

@@ -1,8 +1,11 @@
 import React from 'react';
+import { toast } from 'react-toastify';
+
+const toisty = () => {
+    toast.success('successfully added')
+}
 
 const AddNewService = () => {
-
-    // const toastify = toast.success('successfully added new service')
 
     const handleSubmit = (event) => {
         event.preventDefault();
