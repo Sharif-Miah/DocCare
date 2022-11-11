@@ -22,22 +22,7 @@ const AddNewService = () => {
         console.log(addService);
 
 
-        // fetch('https://server-site-reviw-website-farhan-sharif.vercel.app/', {
-        //     method: 'POST',
-        //     headers: {
-        //         'content-type': 'application/json'
-        //     },
-        //     body: JSON.stringify(addService)
-        // })
-        //     .then(res => res.json())
-        //     .then(data => {
-        //         form.reset()
-        //         console.log(data);
-
-        //     })
-
-
-        fetch('https://server-site-reviw-website-farhan-sharif.vercel.app/services', {
+        fetch('https://server-site-reviw-website-farhan-sharif.vercel.app/', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -46,12 +31,12 @@ const AddNewService = () => {
         })
             .then(res => res.json())
             .then(data => {
+                form.reset()
                 console.log(data);
-                if (data.acknowledged) {
-                    notify();
-                    form.reset()
-                }
+
             })
+
+
 
     }
 
