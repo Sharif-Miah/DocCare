@@ -48,7 +48,7 @@ const MyReview = () => {
 
 
     return (
-        <div>
+        <div className='w-10/12 mx-auto'>
             <h1>My Review</h1>
             <div>
                 <div className="overflow-x-auto">
