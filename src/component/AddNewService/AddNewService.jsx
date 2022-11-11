@@ -1,9 +1,11 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 
 
 
 const AddNewService = () => {
+    const navigate = useNavigate();
     const notify = () => toast.success('Successfully Service Added')
     const handleSubmit = (event) => {
         event.preventDefault();
@@ -34,6 +36,7 @@ const AddNewService = () => {
                 form.reset()
                 console.log(data);
                 notify()
+                navigate('/')
             })
 
     }
