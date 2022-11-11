@@ -88,7 +88,7 @@ const DetailsService = () => {
                             user?.accessToken ?
                                 <div className='flex m-2 mb-4'>
                                     <img title={user.displayName} className='rounded-full  mr-3 w-14 ' src={user.photoURL} alt="" />
-                                    <p className='text-indigo-600 font-semibold bg-indigo-200 px-4 py-1 rounded-xl  '>{user.displayName}</p>
+                                    <p className='text-indigo-600 font-semibold bg-indigo-200 px-4 py-1 rounded-xl'>{user.displayName}</p>
                                 </div> : <div className=' my-3 text-indigo-600 font-semibold bg-indigo-200 px-4 py-1 rounded-xl inline-block '>Please <span onClick={() => navigate('/login')} className=" text-red-500 cursor-pointer ">login</span>  to leave feedback </div>
                         }
 
