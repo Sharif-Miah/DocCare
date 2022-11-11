@@ -92,8 +92,6 @@ const DetailsService = () => {
                                 </div> : <div className=' my-3 text-indigo-600 font-semibold bg-indigo-200 px-4 py-1 rounded-xl inline-block '>Please <span onClick={() => navigate('/login')} className=" text-red-500 cursor-pointer ">login</span>  to leave feedback </div>
                         }
 
-
-
                         <textarea name="message" id="" cols="30" rows="5" className='w-full border border-gray-700 p-3 mr-3' placeholder='Write your text'></textarea>
 
                         {

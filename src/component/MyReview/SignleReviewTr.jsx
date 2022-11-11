@@ -13,22 +13,21 @@ const SignleReviewTr = ({ review, i, handleDelete, handleApprovingStatus }) => {
         handleApprovingStatus(_id, input)
     }
 
+
     return (
-        <div>
+        <tr>
+            <th>{i + 1}</th>
+            <td>{service}</td>
+            <td className='flex flex-wrap '>{!isEditing ? <span>{input}</span> : <input className='border border-black' type="text" defaultValue={input} value={input} onChange={(e) => setInput(e.target.value)} />}</td>
+            <td >{
+                !isEditing ? <button onClick={() => setEditing(true)}><AiFillEdit /></button>
+                    : <button onClick={updating}>update</button>
 
-            <tr>
-                <th>{i + 1}</th>
-                <td>{service}</td>
-                <td className='flex flex-wrap '>{!isEditing ? <span>{input}</span> : <input className='border border-black' type="text" defaultValue={input} value={input} onChange={(e) => setInput(e.target.value)} />}</td>
-                <td >{
-                    !isEditing ? <button onClick={() => setEditing(true)}><AiFillEdit /></button>
-                        : <button onClick={updating}>update</button>
+            }  </td>
+            <td> <span onClick={() => handleDelete(_id)}><AiFillDelete /></span> </td>
+        </tr>
 
-                }  </td>
-                <td> <span onClick={() => handleDelete(_id)}><AiFillDelete /></span> </td>
-            </tr>
 
-        </div>
     )
 }
 
