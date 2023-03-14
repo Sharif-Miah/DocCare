@@ -21,7 +21,7 @@ const Services = () => {
     }, [])
 
     if (loading) {
-        return <div>
+        return <div className='w-20 m-auto'>
             <ColorRing
                 visible={true}
                 height="80"

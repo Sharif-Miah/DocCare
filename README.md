@@ -1,9 +1,9 @@
 
 # Live Project Link
-[https://review-website-fbea4.web.app/login]
+[https://stunning-selkie-708a7a.netlify.app/]
 
 # Client Site Code Link
-[https://github.com/Porgramming-Hero-web-course/b6a11-service-review-client-side-farhan-sharif]
+[https://github.com/Sharif-Miah/DocCare]
 
 # Server Site Code Link
 
