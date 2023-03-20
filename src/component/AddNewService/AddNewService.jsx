@@ -52,19 +52,19 @@ const AddNewService = () => {
                     <div className="grid grid-cols-6 gap-4 col-span-full lg:col-span-3">
                         <div className="col-span-full sm:col-span-3">
                             <label className="text-sm">Tittle</label>
-                            <input name='title' type="text" placeholder="title" className="w-full rounded-md focus:ring focus:ring-opacity-75 focus:ring-violet-400 border border-gray-700 text-gray-900" />
+                            <input name='title' type="text" placeholder="title" className="w-full rounded-md  border border-gray-700 text-gray-900 p-3" />
                         </div>
                         <div className="col-span-full sm:col-span-3">
                             <label for="website" className="text-sm">Img Url</label>
-                            <input id="website" name='imgUrl' type="text" placeholder="https://" className="w-full rounded-md focus:ring focus:ring-opacity-75 focus:ring-violet-400 border border-gray-700 text-gray-900" />
+                            <input id="website" name='imgUrl' type="text" placeholder="https://" className="w-full rounded-md  border border-gray-700 text-gray-900 p-3" />
                         </div>
                         <div className="col-span-full sm:col-span-3">
                             <label for="website" className="text-sm">Price in usd</label>
-                            <input id="website" name='price' type="number" placeholder="Price" className="w-full rounded-md focus:ring focus:ring-opacity-75 focus:ring-violet-400 border border-gray-700 text-gray-900" />
+                            <input id="website" name='price' type="number" placeholder="Price" className="w-full rounded-md  border border-gray-700 text-gray-900 p-3" />
                         </div>
                         <div className="col-span-full">
                             <label for="bio" className="text-sm">description</label>
-                            <textarea name='description' id="bio" placeholder="Please Write description" className="w-full rounded-md focus:ring focus:ring-opacity-75 focus:ring-violet-400 border border-gray-700 text-gray-900"></textarea>
+                            <textarea name='description'  id="bio" placeholder="Please Write description" className="w-full rounded-md   border border-gray-700 text-gray-900 p-5"></textarea>
                             <input className='btn' type="submit" />
                         </div>
                     </div>
