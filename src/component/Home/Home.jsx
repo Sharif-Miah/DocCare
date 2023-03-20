@@ -1,4 +1,5 @@
 import React from 'react';
+import Contact from '../Contact/Contact';
 import Features from '../Features/Features';
 import Hero from '../Hero/Hero';
 import MedacalHealth from '../MedacalHealth/MedacalHealth';
@@ -15,6 +16,7 @@ const Home = () => {
             <Profile />
             <Support/>
             <MedacalHealth/>
+            <Contact/>
         </div>
     );
 };
